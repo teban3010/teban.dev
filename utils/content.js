@@ -19,10 +19,21 @@ const formatPreviewLink = async (content) => {
       regex.lastIndex++;
     }
 
-    try {
-      const previewData = await axios.get(`${process.env.API_URL}url=${m[1]}`);
+    let previewData;
 
-      const replaceData = `<a href="${m[1]}" target="blank" class="preview-card">
+    try {
+      const response = await axios.get(
+        `${process.env.BASE_API}api/linkPreview?url=${m[1]}`
+      );
+      previewData = response.data;
+    } catch (error) {
+      console.error(error);
+    }
+
+    let replaceData;
+
+    if (previewData) {
+      replaceData = `<a href="${m[1]}" target="blank" class="preview-card">
         <div class="preview-card-img-container">
           <img src="${previewData.img}" alt="${previewData.title}"/>
         </div>
@@ -32,17 +43,15 @@ const formatPreviewLink = async (content) => {
           <p class="preview-card-domain">${previewData.domain}</p>
         </div>
       </a>`;
-
-      str = str.replace(m[0], replaceData);
-    } catch (error) {
+    } else {
       const domain = m[1].replace('http://', '').replace('https://', '');
 
-      const replaceData = `<a href="${m[1]}" target="blank" class="preview-card-short-link">
+      replaceData = `<a href="${m[1]}" target="blank" class="preview-card-short-link">
           ${domain}
         </a>`;
-
-      str = str.replace(m[0], replaceData);
     }
+
+    str = str.replace(m[0], replaceData);
   }
 
   return str;
@@ -67,7 +76,9 @@ export const getSorted = (path) => {
         .toString();
 
       // Parse markdown, get frontmatter data, excerpt and content.
-      const { data, excerpt, content, ...others } = matter(markdownWithMetadata);
+      const { data, excerpt, content, ...others } = matter(
+        markdownWithMetadata
+      );
 
       const frontmatter = {
         ...data,
