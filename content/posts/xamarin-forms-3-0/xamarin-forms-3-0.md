@@ -16,7 +16,7 @@ En este evento presentaron oficialmente Xamarin.Forms 3.0, el cual trajo muchas 
 
 Si aún no sabes lo que es Xamarin y llegaste acá, te invito a pasar por mi otro post.
 
-[%card](https://www.teban.dev/post/introduccion-a-xamarin/)
+[%card](https://teban-dev.vercel.app/posts/introduccion-a-xamarin/)
 
 Cuando actualizamos a Xamarin.Forms 3.0 vamos a notar mejoras de estilos y un nuevo layout que va a mejorar la forma en la que realizamos nuestra UI,. Algunos de estos cambios son _Flex Layout_, _Style Sheets_, _Visual State Manager_ y _Right-to-Left Support_. Además, la compilación de XAML tuvo especial atención, reduciendo el tiempo de esta casi en un 90%.
 

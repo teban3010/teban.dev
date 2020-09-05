@@ -18,7 +18,7 @@ En este post vamos a ver los conceptos básicos para construir nuestra primera a
 
 Si aún no sabes lo que es Xamarin y llegaste acá, te invito a pasar por mi otro post:
 
-[%card](https://www.teban.dev/post/introduccion-a-xamarin/)
+[%card](https://teban-dev.vercel.app/posts/introduccion-a-xamarin/)
 
 #### DataBinding
 

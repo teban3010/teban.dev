@@ -62,7 +62,7 @@ const NavigationItems = (props) => {
     //   label: 'About',
     // },
     {
-      link: '/blog',
+      link: '/posts',
       icon: <MenuBook />,
       label: 'Blog',
     },

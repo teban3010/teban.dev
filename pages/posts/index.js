@@ -39,7 +39,7 @@ export default function Blog({ posts }) {
       {posts.map(({ frontmatter: { title, description, date }, slug }) => (
         <article key={slug} className={classes.article}>
           <header>
-            <Link href={'/post/[slug]'} as={`/post/${slug}`}>
+            <Link href={'/posts/[slug]'} as={`/posts/${slug}`}>
               <Typography variant="h3" className={classes.title}>
                 <MuiLink className={classes.link}>{title}</MuiLink>
               </Typography>

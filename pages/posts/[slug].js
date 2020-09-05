@@ -70,8 +70,8 @@ const Post = ({ post, frontmatter, nextPost, previousPost }) => {
         }}>
         {previousPost ? (
           <ActiveLink
-            href={'/post/[slug]'}
-            as={`/post/${previousPost.slug}`}
+            href={'/posts/[slug]'}
+            as={`/posts/${previousPost.slug}`}
             className={classes.link}>
             <Link>← {previousPost.frontmatter.title}</Link>
           </ActiveLink>
@@ -80,8 +80,8 @@ const Post = ({ post, frontmatter, nextPost, previousPost }) => {
         )}
         {nextPost ? (
           <ActiveLink
-            href={'/post/[slug]'}
-            as={`/post/${nextPost.slug}`}
+            href={'/posts/[slug]'}
+            as={`/posts/${nextPost.slug}`}
             className={classes.link}>
             <Link>{nextPost.frontmatter.title} →</Link>
           </ActiveLink>
