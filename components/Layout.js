@@ -23,9 +23,13 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     position: 'relative',
     minHeight: '100vh',
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: `calc(100% - ${theme.drawerWidth}px)`,
+      flexShrink: 0,
+    },
   },
-  contentDrawerOpen: {
-    maxWidth: `calc(100% - ${theme.drawerWidth}px)`,
+  contentFullWith: {
+    maxWidth: '100%',
   },
 }));
 
@@ -81,7 +85,7 @@ const Layout = ({ children, window }) => {
       )}
       <main
         className={clsx(classes.content, {
-          [classes.contentDrawerOpen]: matchesDesktop && useLayout,
+          [classes.contentFullWith]: !useLayout,
         })}>
         <div>
           {!matchesDesktop && useLayout && <div className={classes.toolbar} />}

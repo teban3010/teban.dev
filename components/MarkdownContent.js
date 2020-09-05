@@ -7,6 +7,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Image from 'components/Image';
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
   content: {
     '& a.preview-card-short-link': {
       maxWidth: '680px',
@@ -27,11 +33,12 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
       padding: 10,
 
-      '& :hover': {
+      '&:hover': {
         backgroundColor:
           theme.type === 'dark'
-            ? theme.palette.primary.dark
-            : theme.palette.primary.light,
+            ? theme.palette.secondary.dark
+            : theme.palette.secondary.light,
+        color: theme.palette.secondary.contrastText,
       },
     },
     '& a.preview-card': {
@@ -43,11 +50,17 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
       backgroundColor: theme.palette.background.paper,
 
-      '& :hover': {
+      '&:hover': {
         backgroundColor:
           theme.type === 'dark'
-            ? theme.palette.primary.dark
-            : theme.palette.primary.light,
+            ? theme.palette.secondary.dark
+            : theme.palette.secondary.light,
+        color: theme.palette.secondary.contrastText,
+        '& div.preview-card-description-container': {
+          '& p': {
+            color: theme.palette.secondary.contrastText,
+          },
+        },
       },
 
       '& div.preview-card-img-container': {
@@ -60,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-start',
         justifyContent: 'space-between',
         maxWidth: `calc(100% - 165px)`,
+        width: `calc(100% - 165px)`,
         padding: '15px 20px',
 
         '& p.preview-card-title': {
@@ -108,27 +122,39 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CodeBlock = ({ language, value }) => (
-  <SyntaxHighlighter language={language} style={vscDarkPlus}>
-    {value}
-  </SyntaxHighlighter>
-);
+const CodeBlock = ({ language, value }) => {
+  const classes = useStyles();
 
-const MarkdownImage = ({ alt, src }) => (
-  <Image
-    alt={alt}
-    src={
-      src.includes('http://') || src.includes('https://')
-        ? src
-        : require(`../content/assets/${src}`)
-    }
-    previewSrc={
-      src.includes('http://') || src.includes('https://')
-        ? src
-        : require(`../content/assets/${src}?lqip`)
-    }
-  />
-);
+  return (
+    <div className={classes.container}>
+      <SyntaxHighlighter language={language} style={vscDarkPlus}>
+        {value}
+      </SyntaxHighlighter>
+    </div>
+  );
+};
+
+const MarkdownImage = ({ alt, src }) => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.container}>
+      <Image
+        alt={alt}
+        src={
+          src.includes('http://') || src.includes('https://')
+            ? src
+            : require(`../content/assets/${src}`)
+        }
+        previewSrc={
+          src.includes('http://') || src.includes('https://')
+            ? src
+            : require(`../content/assets/${src}?lqip`)
+        }
+      />
+    </div>
+  );
+};
 
 const MarkdownContent = ({ escapeHtml, source }) => {
   const classes = useStyles();
