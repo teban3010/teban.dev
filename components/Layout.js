@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
-import { useMediaQuery } from '@material-ui/core';
+import { useMediaQuery, Container } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import Toolbar from './Toolbar';
@@ -87,10 +87,10 @@ const Layout = ({ children, window }) => {
         className={clsx(classes.content, {
           [classes.contentFullWith]: !useLayout,
         })}>
-        <div>
-          {!matchesDesktop && useLayout && <div className={classes.toolbar} />}
+        <Container>
+          {!matchesDesktop && useLayout && <Container className={classes.toolbar} />}
           {children}
-        </div>
+        </Container>
         <Footer />
       </main>
     </div>

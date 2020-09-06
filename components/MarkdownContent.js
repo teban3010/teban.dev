@@ -134,7 +134,7 @@ const CodeBlock = ({ language, value }) => {
   );
 };
 
-const MarkdownImage = ({ alt, src }) => {
+export const MarkdownImage = ({ alt, src }) => {
   const classes = useStyles();
 
   return (
