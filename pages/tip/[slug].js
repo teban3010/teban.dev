@@ -42,8 +42,8 @@ const Tip = ({ post, frontmatter, nextPost, previousPost }) => {
       />
 
       <Breadcrumbs>
-        <ActiveLink href={'/blog'} className={classes.link}>
-          <Typography style={{ margin: 0 }}>Blog</Typography>
+        <ActiveLink href={'/tip'} className={classes.link}>
+          <Typography style={{ margin: 0 }}>Tip</Typography>
         </ActiveLink>
         <Typography style={{ margin: 0 }} color="textPrimary">
           {frontmatter.title}

@@ -42,8 +42,8 @@ const Post = ({ post, frontmatter, nextPost, previousPost }) => {
       />
 
       <Breadcrumbs>
-        <ActiveLink href={'/blog'} className={classes.link}>
-          <Typography style={{ margin: 0 }}>Blog</Typography>
+        <ActiveLink href={'/posts'} className={classes.link}>
+          <Typography style={{ margin: 0 }}>Posts</Typography>
         </ActiveLink>
         <Typography style={{ margin: 0 }} color="textPrimary">
           {frontmatter.title}

@@ -42,8 +42,8 @@ const Talk = ({ post, frontmatter, nextPost, previousPost }) => {
       />
 
       <Breadcrumbs>
-        <ActiveLink href={'/blog'} className={classes.link}>
-          <Typography style={{ margin: 0 }}>Blog</Typography>
+        <ActiveLink href={'/talks'} className={classes.link}>
+          <Typography style={{ margin: 0 }}>Talks</Typography>
         </ActiveLink>
         <Typography style={{ margin: 0 }} color="textPrimary">
           {frontmatter.title}
