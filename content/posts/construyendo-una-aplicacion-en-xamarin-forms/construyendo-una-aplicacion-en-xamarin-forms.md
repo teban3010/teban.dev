@@ -10,7 +10,7 @@ tags: [Xamarin, Xamarin Forms, Xamarin Development, Xamarin App Development]
 collection: 'blog'
 ---
 
-![](construyendo-una-aplicacion-en-xamarin-forms/0.png)
+![](posts/construyendo-una-aplicacion-en-xamarin-forms/0.png)
 
 En este post vamos a ver los conceptos básicos para construir nuestra primera aplicación en Xamarin.Forms, para ver como aplicarlos prácticamente, te invito a pasar por el siguiente repositorio de Github que te explica paso a paso como construir una aplicación:
 
@@ -237,7 +237,7 @@ namespace CustomRenderer.Android
 
 En ambos casos lo que estamos realizando es cambiar el background del componente para que se vea como a continuación:
 
-![](construyendo-una-aplicacion-en-xamarin-forms/1.png)
+![](posts/construyendo-una-aplicacion-en-xamarin-forms/1.png)
 
 Para que al ejecutar la aplicación se renderice customizada, solo tenemos que agregar el metadato `ExportRenderer` e indicarle cuál es el componente al cual estamos customizando.
 

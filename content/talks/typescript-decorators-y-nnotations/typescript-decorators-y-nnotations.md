@@ -17,4 +17,6 @@ En este caso, me toco explicar que son Decorators y Annotations en Typescript y 
 
 <iframe src="https://slides.com/teban3010/typescript-annotations/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+## Video
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/251TmCFY8iI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

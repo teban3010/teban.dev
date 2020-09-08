@@ -19,7 +19,11 @@ Charlamos con Mati ([@M_Blayer](https://twitter.com/M_Blayer)) acerca de Robots
 
 ## Audio
 
+<iframe src="https://anchor.fm/teban3010/embed/episodes/TIP-8---Robotitos-ei03fi" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+
 ## Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZfGkHwWur5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Acerca de Mati
 

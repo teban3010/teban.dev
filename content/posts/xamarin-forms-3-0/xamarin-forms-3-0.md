@@ -10,6 +10,8 @@ tags: [Xamarin Forms, Xamarin App Development, Xamarin Development, Xamarin]
 collection: 'blog'
 ---
 
+![](posts/xamarin-forms-3-0/0.jpg)
+
 Entre el 7 y 9 de Junio se realizó el Microsoft Build, evento de conferencia anual realizado por Microsoft, dirigido a ingenieros de software y desarrolladores web que utilizan Windows, Windows Phone, Microsoft Azure y otras tecnologías de Microsoft.
 
 En este evento presentaron oficialmente Xamarin.Forms 3.0, el cual trajo muchas mejoras para quienes lo utilizamos a diario.
@@ -34,7 +36,7 @@ Una de las iniciativas que tomo el equipo de Xamarin se llama _Fast Renderers_. 
 
 Visual State Manager es conocido en otras plataformas con XAML y ahora esta incluido en Xamarin.Forms 3.0. Se pueden definir varios estados para nuestros layouts y controles en XAML o C#, y fácilmente actualizar nuestra UI. Acá hay una vista de la cámara que maneja orientación portrait y landscape, actualizando la disposición de sus elementos:
 
-![](https://cdn-images-1.medium.com/max/2688/0*VXHwFXnJ7p59yojf)
+![](posts/xamarin-forms-3-0/1.jpg)
 
 Podés ver más en esta Lightning Lecture de Xamarin University:
 
@@ -44,7 +46,7 @@ Podés ver más en esta Lightning Lecture de Xamarin University:
 
 FlexLayout es un nuevo layout inspirado en [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Así como los browsers pueden tener cualquier tamaño, la variedad de dimensiones de pantalla en las que pueden correr nuestras aplicaciones en Xamarin.Forms crecieron. Flexlayout es ideal para manejar la distribución y el espaciado entre componentes. Además, provee control a la dirección, justificación y alineación del layout, entre otras propiedades.
 
-![](https://cdn-images-1.medium.com/max/3840/0*I1PofZ8eULE2U1ph)
+![](posts/xamarin-forms-3-0/2.jpg)
 
 Podés ver más en esta Lightning Lecture de Xamarin University:
 
@@ -56,7 +58,7 @@ Cascading Style Sheets (CSS) es el compañero natural de FlexLayout. Usar CSS es
 
 StyleSheets pueden agregarse en un archivo CSS separado, o inline en Resources.
 
-![](https://cdn-images-1.medium.com/max/2688/0*lNdcjuc9F-BGd1IK)
+![](posts/xamarin-forms-3-0/3.jpg)
 
 Podés ver más en esta Lightning Lecture de Xamarin University:
 

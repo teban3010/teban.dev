@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: theme.palette.text.primary,
     fontWeight: 600,
+    marginTop: 0
   },
   description: {
     color: theme.palette.text.secondary,

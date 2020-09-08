@@ -24,7 +24,7 @@ Xamarin es una herramienta que nos permite desarrollar aplicaciones móviles uti
 
 Para esto último, utiliza XAML. Este es similar al XAML que se utilizaba para UWP, pero algunos tags fueron cambiados para su uso. Además de esto, toda la lógica de la aplicación es compartida, por lo que podemos desarrollar una sola vez y reutilizarlo en todos lados.
 
-![](xamarin-forms-cognitive-services-por-una-sociedad-mas-integrada/0.png)
+![](posts/xamarin-forms-cognitive-services-por-una-sociedad-mas-integrada/0.png)
 
 <figcaption>Xamarin.Forms</figcaption>
 

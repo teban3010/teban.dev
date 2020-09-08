@@ -43,11 +43,11 @@ First, download the installer from [https://www.docker.com/community-edition](ht
 
 Open the installer, and check _Add shortcut to desktop_.
 
-![](https://cdn-images-1.medium.com/max/2000/1*P1WfzrgXasOf089h8xhD3Q.png)
+![](posts/azure-functions-with-docker/0.png)
 
 Press _Ok_ and the installation will start.
 
-![](https://cdn-images-1.medium.com/max/2000/1*1c0uhdPC8Gq5J9YaPPSTBQ.png)
+![](posts/azure-functions-with-docker/1.png)
 
 ## Hello World
 
@@ -57,7 +57,7 @@ The first thing you have to do is open a Terminal, and run the following:
 
 func init . --docker
 
-![](https://cdn-images-1.medium.com/max/2000/1*TPhPC2SGwvLTMSmgzxOfRg.png)
+![](posts/azure-functions-with-docker/2.png)
 
 This command will create the configuration files to run the Azure Functions with Docker.
 
@@ -67,11 +67,11 @@ func new
 
 Select JavaScript as language, and HttpTrigger as template (option 2 twice). Name the function _Hello World_.
 
-![](https://cdn-images-1.medium.com/max/2000/1*s3RIYuKSNBWsnhVL2CpLzw.png)
+![](posts/azure-functions-with-docker/3.png)
 
 If you open the folder in VS Code, you will see the following files:
 
-![](https://cdn-images-1.medium.com/max/2000/1*_FBAWpQsyn2MtcWnoUSF7Q.png)
+![](posts/azure-functions-with-docker/4.png)
 
 Open the function.json file and change authLevel to anonymous . You can see the function code on de index.js .
 
@@ -79,15 +79,15 @@ Once that is done, you can run docker build -t hello_world . and docker run -p 8
 
 Open a browser and go to [http://localhost:8080](http://localhost:8080) you should see something like this:
 
-![](https://cdn-images-1.medium.com/max/2000/1*gtQWoVTVbICYcisYN_bGiQ.png)
+![](posts/azure-functions-with-docker/5.png)
 
 To test the function, you can navigate to http:localhost:8080/api/HttpTriggerJS?name=world and you should see something like this:
 
-![](https://cdn-images-1.medium.com/max/2000/1*P6u4FZTb2ZWoIYBdoCBT7A.png)
+![](posts/azure-functions-with-docker/6.png)
 
 Now, let’s add another function. In your terminal, run func new like before, but name the function _ReverseWord._
 
-![](https://cdn-images-1.medium.com/max/2000/1*7gLsojZMY9b_y9XYnVWcKQ.png)
+![](posts/azure-functions-with-docker/7.png)
 
 Open the function.json file and change authLevel to anonymous . Then, open the index.js file, and replace the following code:
 
@@ -115,7 +115,7 @@ Once that is done, you can run docker build -t hello_world . and docker run -p 8
 
 Open a browser and go to [http://localhost:8000](http://localhost:8080). To test the function, you can navigate to http:localhost:8000/api/ReverseWord?name=world and you should see something like this:
 
-![](https://cdn-images-1.medium.com/max/2000/1*IrFMy3Kwds15F7QHXt2w-w.png)
+![](posts/azure-functions-with-docker/8.png)
 
 You can find the whole example here:
 

@@ -12,7 +12,7 @@ collection: 'blog'
 
 ¿Desarrollás en C# y querés comenzar desarrollar mobile? ¿Querés conocer que es Xamarin? Acá te voy a contar todo eso.
 
-![Resultado de imagen para Xamarin](introduccion-a-xamarin/0.png)
+![Resultado de imagen para Xamarin](posts/introduccion-a-xamarin/0.png)
 
 #### ¿Qué es Xamarin?
 
@@ -26,7 +26,7 @@ La respuesta a esa pregunta es **NO.** Utilizando Xamarin vamos a tener aplicaci
 
 Para que una aplicación se pueda considerar nativa, tiene que cumplir tres condiciones fundamentales: la UI tiene que ser nativa, la performance tiene que ser nativa y tiene que tener acceso a todas las APIs nativas.
 
-![](introduccion-a-xamarin/1.png)
+![](posts/introduccion-a-xamarin/1.png)
 
 Xamarin cumple las tres condiciones, por lo que desarrollando con Xamarin vamos a tener una aplicación nativa.
 
@@ -36,11 +36,11 @@ Xamarin no convierte su código a lenguaje nativo, sino que utiliza los compilad
 
 En el caso de iOS compila su código utilizando Ahead Of Time (AOT) para producir los binarios necesarios para subir nuestra aplicación en el App Store.
 
-![](introduccion-a-xamarin/2.png)
+![](posts/introduccion-a-xamarin/2.png)
 
 Para Android, utiliza Just In Time (JIT) en el dispositivo para correr nativo.
 
-![](introduccion-a-xamarin/3.png)
+![](posts/introduccion-a-xamarin/3.png)
 
 #### Xamarin y Xamarin.Forms
 
@@ -48,13 +48,13 @@ La distincion principal entre Xamarin y Xamarin.Forms se basa en como vamos a de
 
 Con Xamarin, que lo vamos a llamar Xamarin Tradicional para poder hacer la distinción, vamos a tener la lógica de la aplicación compartida, pero la UI vamos a hacerla especifica para cada plataforma. En el caso de Android vamos a utilizar AXML, para iOS Storyboards y para Windows XAML. Lo importante es destacar que a pesar de esto, vamos a seguir utilizando C# como code behind.
 
-![](introduccion-a-xamarin/4.png)
+![](posts/introduccion-a-xamarin/4.png)
 
 <figcaption>Xamarin — Traditional UI</figcaption>
 
 Como ya dije antes, la diferencia con Xamarin.Forms es como vamos a desarrollar la UI, este nos permite tener la UI compartida también, que va a ser desarrollada utilizando XAML. La versión de XAML utilizada para Xamarin.Forms no es la misma que utilizamos para hacer las vistas nativas de Windows.
 
-![](introduccion-a-xamarin/5.png)
+![](posts/introduccion-a-xamarin/5.png)
 
 <figcaption>Xamarin.Forms — Cross Platform UI</figcaption>
 
