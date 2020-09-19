@@ -26,3 +26,5 @@ Charlamos con Cami ([@camilunghi](https://twitter.com/camilunghi)) acerca e Even
 <iframe width="560" height="315" src="https://www.youtube.com/embed/je_z2knGWe4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Acerca de Cami
+
+Technical Recruiter & Communications Analyst en Leniolabs. Soy parte del equipo organizador de Meetup.JS, Nodeconf Argentina y Burger.JS. Si no estoy reclutando, estoy organizando un evento.

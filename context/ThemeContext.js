@@ -9,7 +9,7 @@ export const ThemeContext = React.createContext({
 });
 
 const ThemeContextProvider = (props) => {
-  const [themeLight, setThemeLight] = useState(false);
+  const [themeLight, setThemeLight] = useState(true);
 
   useEffect(() => {
     setThemeLight(localStorage.getItem('lightTheme') === 'true');
