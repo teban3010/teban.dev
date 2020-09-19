@@ -3,10 +3,9 @@ export default {
     title: 'Teban.dev',
     author: {
       name: 'Esteban Yañez',
-      summary:
-        'Lead software engineer at @SOUTHWORKS. Speaker. Geek. Creator of @TIP_PodcastOK. he/him. Opinions are my own.',
+      summary: `I'm a software developer with 5+ years of experience. I work with the latest technologies, specially related with Cloud Computing, Web and Mobile Development. Now, I work as Engineering Lead at SOUTHWORKS. Also, I was Full Stack Development mentor at Acamica. I've being part of the organizer team of vOpen Ar, Age of Mobile, Xamarin Assemble and Dev Day Ar. I frequently participate as speaker on software development conferences and actively contribute to the tech community.`,
     },
-    description: 'A blog created with Next.js and Tailwind.css',
+    description: 'My personal page',
     siteUrl: 'https://teban.dev/',
     language: 'en-US',
     social: {
