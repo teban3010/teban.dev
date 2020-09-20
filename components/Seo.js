@@ -38,8 +38,6 @@ const SEO = ({ title, description = '', previewImage }) => {
         content={siteMetadata.social.twitter}
         key="twhandle"
       />
-      <link rel="icon" type="image/png" href="/static/favicon.ico" />
-      <link rel="apple-touch-icon" href="/static/favicon.ico" />
     </Head>
   );
 };
