@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import clsx from 'clsx';
-import { useRouter } from 'next/router';
-import { useMediaQuery, Container } from '@material-ui/core';
+import { Container, useMediaQuery } from '@material-ui/core';
+import React, { useEffect, useState } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
-import Toolbar from './Toolbar';
-import SideDrawer from './SideDrawer';
 import Footer from './Footer';
+import { MyTheme } from 'styles/theme';
+import SideDrawer from './SideDrawer';
+import Toolbar from './Toolbar';
+import clsx from 'clsx';
+import { useRouter } from 'next/router';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: MyTheme) => ({
   root: {
     display: 'flex',
   },
@@ -33,13 +34,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Layout = ({ children, window }) => {
+const Layout: React.FC<any> = ({ children, window }) => {
   const classes = useStyles();
   const theme = useTheme();
   const { pathname } = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [useLayout, setUseLayout] = useState(true);
-  const [title, setTitle] = useState(false);
+  const [title, setTitle] = useState('');
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
   useEffect(() => {
@@ -69,6 +70,9 @@ const Layout = ({ children, window }) => {
     setMobileOpen(!mobileOpen);
   };
 
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
   return (
     <div className={classes.root}>
       {useLayout && (
@@ -77,9 +81,9 @@ const Layout = ({ children, window }) => {
             <Toolbar title={title} onDrawerToggle={handleDrawerToggle} />
           )}
           <SideDrawer
-            mobileOpen={mobileOpen}
+            open={mobileOpen}
             onDrawerToggle={handleDrawerToggle}
-            window={window}
+            container={container}
           />
         </>
       )}
@@ -88,7 +92,7 @@ const Layout = ({ children, window }) => {
           [classes.contentFullWith]: !useLayout,
         })}>
         <Container>
-          {!matchesDesktop && useLayout && <Container className={classes.toolbar} />}
+          {!matchesDesktop && useLayout && <div className={classes.toolbar} />}
           {children}
         </Container>
         <Footer />

@@ -1,8 +1,14 @@
-import React from 'react';
 import Head from 'next/head';
+import React from 'react';
 import { getSiteMetaData } from 'utils/helpers';
 
-const SEO = ({ title, description = '', previewImage }) => {
+export interface SEOProps {
+  title: string;
+  description?: string;
+  previewImage?: string;
+}
+
+const SEO: React.FC<SEOProps> = ({ title, description = '', previewImage }) => {
   const siteMetadata = getSiteMetaData();
 
   const metaDescription = description || siteMetadata.description;

@@ -1,16 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import clsx from 'clsx';
 import {
-  Typography,
   Box,
-  Link as MuiLink,
   Card,
+  Link as MuiLink,
+  Typography,
   useMediaQuery,
 } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
+import ActiveLink from './ActiveLink';
 import Image from 'components/Image';
+import Link from 'next/link';
+import React from 'react';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   article: {
@@ -57,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: theme.palette.text.primary,
     fontWeight: 600,
-    marginTop: 0
+    marginTop: 0,
   },
   description: {
     color: theme.palette.text.secondary,
@@ -76,7 +77,10 @@ const TipCard = ({ title, description, date, src, slug, listDisplay }) => {
       className={clsx(classes.article, {
         [classes.articleList]: matchesDesktop && listDisplay,
       })}>
-      <Link className={classes.link} href={'/tip/[slug]'} as={`/tip/${slug}`}>
+      <ActiveLink
+        className={classes.link}
+        href={'/tip/[slug]'}
+        as={`/tip/${slug}`}>
         <Card
           className={clsx(classes.card, {
             [classes.cardList]: matchesDesktop && listDisplay,
@@ -110,7 +114,7 @@ const TipCard = ({ title, description, date, src, slug, listDisplay }) => {
             </section>
           </div>
         </Card>
-      </Link>
+      </ActiveLink>
     </Box>
   );
 };

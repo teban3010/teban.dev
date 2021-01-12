@@ -1,8 +1,9 @@
-import { withRouter } from 'next/router';
-import Link from 'next/link';
 import React, { Children } from 'react';
 
-const ActiveLink = ({
+import Link from 'next/link';
+import { withRouter } from 'next/router';
+
+const ActiveLink: React.FC<any> = ({
   router,
   children,
   className,

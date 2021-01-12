@@ -1,14 +1,16 @@
-import React from 'react';
 import {
   AppBar,
-  Typography,
   IconButton,
   Toolbar as MuiToolbar,
+  Typography,
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Menu } from '@material-ui/icons';
 
-const useStyles = makeStyles((theme) => ({
+import { Menu } from '@material-ui/icons';
+import { MyTheme } from 'styles/theme';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme: MyTheme) => ({
   appBar: {
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${theme.drawerWidth}px)`,

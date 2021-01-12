@@ -1,8 +1,20 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { Theme, createMuiTheme } from '@material-ui/core/styles';
 
 const storageKeys = {
   theme: 'theme',
 };
+
+export interface MyTheme extends Theme {
+  type?: string;
+  drawerWidth?: number;
+}
+
+declare module '@material-ui/core/styles/createMuiTheme' {
+  interface ThemeOptions {
+    type?: string;
+    drawerWidth?: number;
+  }
+}
 
 export const lightTheme = createMuiTheme({
   type: 'light',
@@ -36,7 +48,6 @@ export const lightTheme = createMuiTheme({
       secondary: 'rgba(0, 0, 0, 0.54)',
       disabled: 'rgba(0, 0, 0, 0.38)',
       hint: 'rgba(0, 0, 0, 0.38)',
-      blockquote: 'rgba(0, 0, 0, 0.59)',
     },
   },
   typography: {
@@ -52,12 +63,12 @@ export const lightTheme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
-    h1: { fontSize: '2.5rem', fontWeight: '900', marginTop: '1.75rem' },
-    h2: { fontSize: '1.73286rem', fontWeight: '900', marginTop: '1.75rem' },
-    h3: { fontSize: '1.4427rem', fontWeight: '900', marginTop: '1.75rem' },
-    h4: { fontSize: '1rem', fontWeight: '900', marginTop: '1.75rem' },
-    h5: { fontSize: '0.83255rem', fontWeight: '900', marginTop: '1.75rem' },
-    h6: { fontSize: '0.83255rem', fontWeight: '900', marginTop: '1.75rem' },
+    h1: { fontSize: '2.5rem', marginTop: '1.75rem' },
+    h2: { fontSize: '1.73286rem', marginTop: '1.75rem' },
+    h3: { fontSize: '1.4427rem', marginTop: '1.75rem' },
+    h4: { fontSize: '1rem', marginTop: '1.75rem' },
+    h5: { fontSize: '0.83255rem', marginTop: '1.75rem' },
+    h6: { fontSize: '0.83255rem', marginTop: '1.75rem' },
     body1: { fontSize: '0.875rem', marginBottom: '1.75rem' },
   },
 });
@@ -94,7 +105,6 @@ export const darkTheme = createMuiTheme({
       secondary: 'rgba(176, 193, 206, 1)',
       disabled: 'rgba(178, 183, 189, 1)',
       hint: 'rgba(178, 183, 189, 1)',
-      blockquote: 'rgba(255, 255, 255, 0.59)',
     },
   },
   typography: {
@@ -110,12 +120,12 @@ export const darkTheme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
-    h1: { fontSize: '2.5rem', fontWeight: '900', marginTop: '1.75rem' },
-    h2: { fontSize: '1.73286rem', fontWeight: '900', marginTop: '1.75rem' },
-    h3: { fontSize: '1.4427rem', fontWeight: '900', marginTop: '1.75rem' },
-    h4: { fontSize: '1rem', fontWeight: '900', marginTop: '1.75rem' },
-    h5: { fontSize: '0.83255rem', fontWeight: '900', marginTop: '1.75rem' },
-    h6: { fontSize: '0.83255rem', fontWeight: '900', marginTop: '1.75rem' },
+    h1: { fontSize: '2.5rem', marginTop: '1.75rem' },
+    h2: { fontSize: '1.73286rem', marginTop: '1.75rem' },
+    h3: { fontSize: '1.4427rem', marginTop: '1.75rem' },
+    h4: { fontSize: '1rem', marginTop: '1.75rem' },
+    h5: { fontSize: '0.83255rem', marginTop: '1.75rem' },
+    h6: { fontSize: '0.83255rem', marginTop: '1.75rem' },
     body1: { fontSize: '0.875rem', marginBottom: '1.75rem' },
   },
 });

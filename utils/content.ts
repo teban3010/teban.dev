@@ -1,6 +1,6 @@
-import matter from 'gray-matter';
-import fs from 'fs';
 import axios from 'axios';
+import fs from 'fs';
+import matter from 'gray-matter';
 
 export const getFolders = (path) =>
   fs.readdirSync(`${process.cwd()}/content/${path}`).map((folderName) => ({
@@ -95,9 +95,11 @@ export const getSorted = (path) => {
         content,
       };
     })
-    .filter((p) => !p.frontmatter.draft)
+    .filter((p) => !(p.frontmatter as any).draft)
     .sort(
-      (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+      (a, b) =>
+        (new Date(b.frontmatter.date) as any) -
+        (new Date(a.frontmatter.date) as any)
     );
 
   return content;

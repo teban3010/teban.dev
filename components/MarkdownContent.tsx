@@ -1,12 +1,12 @@
+import Image from 'components/Image';
+import { MyTheme } from 'styles/theme';
 import React from 'react';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { makeStyles } from '@material-ui/core/styles';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-import Image from 'components/Image';
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: MyTheme) => ({
   container: {
     display: 'flex',
     justifyContent: 'center',

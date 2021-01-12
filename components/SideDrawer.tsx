@@ -1,12 +1,13 @@
-import React from 'react';
-import { Drawer, Divider, useMediaQuery } from '@material-ui/core';
+import { Divider, Drawer, useMediaQuery } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import Bio from './Bio';
+import { MyTheme } from 'styles/theme';
 import NavigationItems from './NavigationItems';
+import React from 'react';
 import ThemeSwitch from './ThemeSwitch';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: MyTheme) => ({
   drawer: {
     [theme.breakpoints.up('sm')]: {
       width: theme.drawerWidth,
@@ -18,7 +19,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DesktopDrawer = ({ children }) => {
+export interface DrawerProps {
+  open: boolean;
+  onClose?: any;
+  container?: any;
+}
+
+const DesktopDrawer: React.FC<DrawerProps> = ({ children }) => {
   const classes = useStyles();
   return (
     <Drawer
@@ -32,12 +39,14 @@ const DesktopDrawer = ({ children }) => {
   );
 };
 
-const MobileDrawer = ({ open, onClose, children, window }) => {
+const MobileDrawer: React.FC<DrawerProps> = ({
+  open,
+  onClose,
+  children,
+  container,
+}) => {
   const classes = useStyles();
   const theme = useTheme();
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Drawer
@@ -57,7 +66,7 @@ const MobileDrawer = ({ open, onClose, children, window }) => {
   );
 };
 
-const SideDrawer = ({ mobileOpen, onDrawerToggle }) => {
+const SideDrawer = ({ open, onDrawerToggle, container }) => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('sm'));
@@ -66,7 +75,10 @@ const SideDrawer = ({ mobileOpen, onDrawerToggle }) => {
 
   return (
     <div className={classes.drawer}>
-      <DrawerComponent open={mobileOpen} onClose={onDrawerToggle}>
+      <DrawerComponent
+        open={open}
+        onClose={onDrawerToggle}
+        container={container}>
         <ThemeSwitch />
         {matchesDesktop && (
           <>
